@@ -47,7 +47,7 @@
                         <Frame BackgroundColor="SkyBlue" HeightRequest="40" WidthRequest="40" CornerRadius="30"  Padding="0" Margin="5">
                             <Image Source="https://cdn4.iconfinder.com/data/icons/glyphs/24/icons_user2-256.png" Aspect="AspectFill" Margin="0" />
                         </Frame>
-                        <Entry Text="{Binding UserName}" Keyboard="Email" Placeholder="Username" TextColor="Black" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
+                        <Entry Text="" x:Name="EmailEntry" Keyboard="Email" Placeholder="Username" TextColor="Black" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
                     </StackLayout>
                 </Frame>
 
@@ -58,7 +58,7 @@
                         <Frame BackgroundColor="SkyBlue" HeightRequest="40" WidthRequest="40" CornerRadius="30"  Padding="0" Margin="5">
                             <Image Source="https://cdn0.iconfinder.com/data/icons/basic-ui-elements-round/700/09_lock-256.png" Aspect="AspectFill" Margin="0" />
                         </Frame>
-                        <Entry x:Name="passwordEntry" Text="{Binding Password}" Placeholder="Password" IsPassword="True" TextColor="Black" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
+                        <Entry x:Name="passwordEntry" Text="" Placeholder="Password" IsPassword="True" TextColor="Black" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
 
                     </StackLayout>
                 </Frame>
@@ -69,7 +69,7 @@
                     <Button Text="Forgot Password?" BackgroundColor="Transparent" TextColor="Red" FontAttributes="Bold" HorizontalOptions="EndAndExpand" />
                 </StackLayout>
 
-                <Button Text="SIGN IN" BackgroundColor="#58d68d" TextColor="White" FontSize="Medium" FontAttributes="Bold" CornerRadius="30" WidthRequest="200" Margin="0,15,0,0" Command="{Binding LoginCommand}"/>
+                <Button Clicked="Button_Clicked" Text="SIGN IN" BackgroundColor="#58d68d" TextColor="White" FontSize="Medium" FontAttributes="Bold" CornerRadius="30" WidthRequest="200" Margin="0,15,0,0" Command="{Binding LoginCommand}"/>
 
                 <StackLayout Margin="5" Padding="0">
                     <Label Text="User other Options" TextColor="DarkGray" FontAttributes="Bold" FontSize="Subtitle" VerticalOptions="Center" HorizontalTextAlignment="Center" Margin="5"/>
@@ -87,7 +87,6 @@
                 <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Margin="0,30,0,0" Padding="0">
                     <Label Text="New User?" TextColor="DarkGray" FontSize="Small" VerticalOptions="Center" HorizontalTextAlignment="Center"/>
                     <Button x:Name="btnSignup" Text="Sign Up" BackgroundColor="Transparent" TextColor="#1D8348" FontAttributes="Bold" HorizontalOptions="EndAndExpand" Clicked="btnSignup_Clicked"/>
-
                 </StackLayout>
             </StackLayout>
         </Grid>
